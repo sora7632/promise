@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>予約フォーム</title>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag 'reserves', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+
+
+
+
+
+
+  <div class="container">
+    <%= form_for @tweet,  html: { class: "form-field" } do |f| %>
+      <div>
+        <%= f.label :start, "予約日時" %><br>
+        <%= f.datetime_select :start, start: { behavior: "flatpickr" } %>
+      </div>
+      <div>
+        <%# <%= f.label :plan, "学習計画" %><br> 
+        <%# <%= f.text_area :plan %> 
+      </div>
+      <div>
+        <%= f.submit "予約確定" %>
+      </div>
+    <% end %>
+  </div>
+</body>
+</html>

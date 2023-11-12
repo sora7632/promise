@@ -1,0 +1,67 @@
+// Place all the styles related to the reserves controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.form-field {
+  margin-bottom: 25px;
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.form-field input[type="text"],
+.form-field textarea {
+  width: calc(100% - 16px);
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  transition: border-color 0.3s;
+}
+
+.form-field input[type="text"]:focus,
+.form-field textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+.form-field textarea {
+  min-height: 120px;
+}
+
+.form-field input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-field input[type="submit"]:hover {
+  background-color: #368b47;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.form-field {
+  width: 100%;
+  max-width: 500px; /* 最大幅を設定 */
+  /* 他のスタイル... */
+}
