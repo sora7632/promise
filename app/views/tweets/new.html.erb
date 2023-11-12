@@ -14,17 +14,21 @@
 
 
   <div class="container">
-    <%= form_for @tweet,  html: { class: "form-field" } do |f| %>
+    <%= form_for @tweet,  html: { class: "form-field" } do |t| %>
       <div>
-        <%= f.label :start, "予約日時" %><br>
-        <%= f.datetime_select :start, start: { behavior: "flatpickr" } %>
+        <%= t.label :start, "予約日時" %><br>
+        <%= t.datetime_select :start, start: { behavior: "flatpickr" } %>
       </div>
       <div>
-        <%# <%= f.label :plan, "学習計画" %><br> 
-        <%# <%= f.text_area :plan %> 
+      <%= t.label :finish, "学習計画" %><br> 
+        <%= t.text_field :finish %> 
       </div>
       <div>
-        <%= f.submit "予約確定" %>
+        <%= t.label :study, "学習計画" %><br> 
+        <%= t.text_field :study %> 
+      </div>
+      <div>
+        <%= t.submit "予約確定" %>
       </div>
     <% end %>
   </div>

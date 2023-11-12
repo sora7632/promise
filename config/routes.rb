@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get 'tweets/new'=> 'tweets#new'
   post 'tweets' => 'tweets#create'
   root 'tweets#index'
+  resources :tweets, only: [:index, :new, :create]
+
 end
